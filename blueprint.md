@@ -23,8 +23,3 @@ Add the `blob-element` to your html and you're ready to go.
 Remember to give your blob a width, a height and a background of some sort. If you want transitions on your blob you can set the `--blob-transition` css variable. Have fun!
 
 {{ template:license }}
-
-<a href="#license"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="Demo" width="300" /></a>
-
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-license)
-
