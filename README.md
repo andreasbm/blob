@@ -1,8 +1,10 @@
 <h1 align="center">@appnest/blob</h1>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/blob/master/assets/demo.gif" alt="Demo" width="500" />
-</p>
+<a href="https://appnest-demo.firebaseapp.com/blob/">
+	<p align="center">
+	  <img src="https://raw.githubusercontent.com/andreasbm/blob/master/assets/demo.gif" alt="Demo" width="300" />
+	</p>
+</a>
 
 [The blob is waiting for you here](https://appnest-demo.firebaseapp.com/blob/).
 
@@ -24,7 +26,7 @@ Add the `blob-element` to your html and you're ready to go.
 <blob-element></blob-element>
 ```
 
-Remember to give your blob a width and a height. If you want transitions on your blob you can set the `--blob-transition` css variable. Have fun!
+Remember to give your blob a width, a height and a background of some sort. If you want transitions on your blob you can set the `--blob-transition` css variable. Have fun!
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
