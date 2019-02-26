@@ -1,5 +1,9 @@
 {{ template:title }}
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/blob/master/demo.gif" alt="Demo" width="500" />
+</p>
+
 ## Introduction
 
 During the [February 2019 week 3 #CodePenChallenge](https://codepen.io/challenges/2019/february/3) the theme was blob shapes. I found [this](https://codepen.io/LekovicMilos/full/omVzYv) awesome blob generator and decides to turn it into a reusable web component.

@@ -1,5 +1,9 @@
 <h1 align="center">@appnest/blob</h1>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/blob/master/demo.gif" alt="Demo" width="500" />
+</p>
+
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
 
