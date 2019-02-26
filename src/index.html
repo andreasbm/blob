@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blob</title>
+	<style>
+		#demo {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			user-select: none;
+		}
+
+		#blob {
+			width: 300px;
+			height: 300px;
+			background: #3f6bff;
+			cursor: pointer;
+			--blob-transition: border-radius 500ms ease;
+		}
+
+		label {
+			color: rgb(134, 134, 134);
+		}
+	</style>
+</head>
+<body>
+
+<div id="demo">
+	<blob-element id="blob"></blob-element>
+	<br/>
+	<label>Click me!</label>
+</div>
+
+<script>
+	const $blob = document.querySelector("#blob");
+	window.addEventListener("click", () => $blob.update());
+</script>
+<script type="module" src="blob-element.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"name": "@appnest/blob",
+	"license": "MIT",
+	"version": "1.0.0",
+	"scripts": {
+		"readme": "node node_modules/.bin/readme",
+		"s": "http-server src -o"
+	},
+	"devDependencies": {
+		"@appnest/readme": "^1.0.22",
+		"http-server": "^0.11.1"
+	}
+}
