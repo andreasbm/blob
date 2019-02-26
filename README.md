@@ -1,7 +1,7 @@
 <h1 align="center">@appnest/blob</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/blob/master/demo.gif" alt="Demo" width="500" />
+  <img src="https://raw.githubusercontent.com/andreasbm/blob/master/assets/demo.gif" alt="Demo" width="500" />
 </p>
 
 [The blob is waiting for you here](https://appnest-demo.firebaseapp.com/blob/).
