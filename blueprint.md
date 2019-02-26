@@ -1,8 +1,8 @@
 {{ template:title }}
 
-<a align="center" href="https://appnest-demo.firebaseapp.com/blob/">
+<p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/blob/master/demo.gif" alt="Demo" width="500" />
-</a>
+</p>
 
 [The blob is waiting for you here](https://appnest-demo.firebaseapp.com/blob/).
 
