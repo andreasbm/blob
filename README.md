@@ -34,3 +34,8 @@ Remember to give your blob a width, a height and a background of some sort. If y
 ## ➤ License
 	
 Licensed under [MIT](https://opensource.org/licenses/MIT).
+
+<a href="#license"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="Demo" width="300" /></a>
+
+<a href="#license">![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)</a>
+
