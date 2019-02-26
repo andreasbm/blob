@@ -16,9 +16,19 @@
 		#blob {
 			width: 300px;
 			height: 300px;
-			background: #3f6bff;
 			cursor: pointer;
-			--blob-transition: border-radius 500ms ease;
+			--blob-transition: border-radius 500ms ease, background-color 500ms ease;
+			position: relative;
+			background: #2ab7ca;
+		}
+
+		#face {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 
 		label {
@@ -29,14 +39,25 @@
 <body>
 
 <div id="demo">
-	<blob-element id="blob"></blob-element>
+	<blob-element id="blob">
+		<img id="face" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTIzM3B4%0D%0AIiBoZWlnaHQ9IjEyMzNweCIgdmlld0JveD0iMCAwIDEyMzMgMTIzMyIgdmVyc2lvbj0iMS4xIiB4%0D%0AbWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3%0D%0ALnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTEuMyAoNTc1%0D%0ANDQpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxl%0D%0APmZhY2U8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8%0D%0AZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iZmFjZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9%0D%0AIjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTM3%0D%0ANy4zMDA2NDcsNTgxIEM0NzkuNDQxOTUxLDY1OC4wODYyOTkgNTc0LjM1MjI2MSw2OTYuNjI5NDQ4%0D%0AIDY2Mi4wMzE1NzYsNjk2LjYyOTQ0OCBDNzQ5LjcxMDg5LDY5Ni42Mjk0NDggODMwLjExMDYyMiw2%0D%0ANjQuMjIzODkgOTAzLjIzMDc3MSw1OTkuNDEyNzczIEM4MTQuMDU2MzAyLDc2My4xODY5NyA3MjUu%0D%0ANzk1MTMzLDg0NS4wNzQwNjkgNjM4LjQ0NzI2NCw4NDUuMDc0MDY5IEM1NTEuMDk5Mzk0LDg0NS4w%0D%0ANzQwNjkgNDY0LjA1MDUyMiw3NTcuMDQ5Mzc5IDM3Ny4zMDA2NDcsNTgxIFoiIGlkPSJQYXRoIiBm%0D%0AaWxsPSIjQzI0MDM4IiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICA8cGF0aCBk%0D%0APSJNNjgyLDUyMy4zNjIyNzMgQzcwNi43NDc4NTEsNDUyLjYzMjEwOSA3NDAuNDM3Nzg1LDQyMS42%0D%0ANjQzMDkgNzgzLjA2OTgwMyw0MzAuNDU4ODc0IEM4MjUuNzAxODIxLDQzOS4yNTM0MzkgODY1Ljc1%0D%0ANTQ3Nyw0ODUuNDMzODE0IDkwMy4yMzA3NzEsNTY5IEM4NjIuMTcxMzQ4LDUzNS41MTU3MjUgODI1%0D%0ALjI5OTU1Myw1MTUuNDAyMzc2IDc5Mi42MTUzODUsNTA4LjY1OTk1NSBDNzU5LjkzMTIxNyw1MDEu%0D%0AOTE3NTMzIDcyMy4wNTk0MjIsNTA2LjgxODMwNiA2ODIsNTIzLjM2MjI3MyBaIiBpZD0iUGF0aC0y%0D%0AIiBmaWxsPSIjNDQ0NDQ0IiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICA8cGF0%0D%0AaCBkPSJNNjEwLjIzMDc3MSw1MjMuMzYyMjczIEM1NjkuMTcxMzQ4LDUwNi44MTgzMDYgNTMyLjI5%0D%0AOTU1Myw1MDEuOTE3NTMzIDQ5OS42MTUzODUsNTA4LjY1OTk1NSBDNDY2LjkzMTIxNyw1MTUuNDAy%0D%0AMzc2IDQzMC4wNTk0MjIsNTM1LjUxNTcyNSAzODksNTY5IEM0MjYuNDc1Mjk0LDQ4NS40MzM4MTQg%0D%0ANDY2LjUyODk1LDQzOS4yNTM0MzkgNTA5LjE2MDk2OCw0MzAuNDU4ODc0IEM1NTEuNzkyOTg2LDQy%0D%0AMS42NjQzMDkgNTg1LjQ4MjkyLDQ1Mi42MzIxMDkgNjEwLjIzMDc3MSw1MjMuMzYyMjczIFoiIGlk%0D%0APSJQYXRoLTIiIGZpbGw9IiM0NDQ0NDQiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAg%0D%0AICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGZpbGwtb3BhY2l0eT0iMC4xNzc2Nzc3NjMiIGZpbGw9IiNE%0D%0AOEQ4RDgiIGZpbGwtcnVsZT0ibm9uemVybyIgY3g9Ijk5NyIgY3k9IjYxNCIgcj0iNzAiPjwvY2ly%0D%0AY2xlPgogICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGZpbGwtb3BhY2l0eT0iMC4xNzc2Nzc3NjMi%0D%0AIGZpbGw9IiNEOEQ4RDgiIGZpbGwtcnVsZT0ibm9uemVybyIgY3g9IjIzMi41NjAyOCIgY3k9IjYy%0D%0ANCIgcj0iNzAiPjwvY2lyY2xlPgogICAgPC9nPgo8L3N2Zz4=" />
+	</blob-element>
 	<br/>
 	<label>Tickle me!</label>
 </div>
 
 <script>
 	const $blob = document.querySelector("#blob");
-	window.addEventListener("click", () => $blob.update());
+	const colors = ["#2ab7ca", "#fed766", "#851e3e", "#63ace5", "#e7eff6", "#fec8c1", "#f9caa7", "#65c3ba", "#d0e1f9", "#96ceb4", "#ffaaa5"];
+
+	function updateBlob () {
+		$blob.update();
+
+		const newColor = colors[Math.floor(Math.random() * colors.length - 1)];
+		$blob.style.backgroundColor = newColor;
+	}
+
+	window.addEventListener("click", updateBlob);
 </script>
 <script type="module" src="blob-element.js"></script>
 </body>
