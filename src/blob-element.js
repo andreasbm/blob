@@ -10,6 +10,12 @@ template.innerHTML = `
 `;
 
 /**
+ * The sharpness sharpness of the blob.
+ * @type {number}
+ */
+const DEFAULT_SHARPNESS = 25;
+
+/**
  * Generates a random number from min to max (inclusive).
  * @param min
  * @param max
@@ -23,28 +29,37 @@ function random (min, max) {
  * Generates a random border radius.
  * @returns {string}
  */
-function getRandomBorderRadius () {
+function getRandomBorderRadius (sharpness) {
+
+	// Get the min and max sharpness
+	const min = 50 - sharpness;
+	const max = 50 + sharpness;
 
 	// Generate four random numbers, one for each corner
-	const p1 = random(25, 75);
-	const p2 = random(25, 75);
-	const p3 = random(25, 75);
-	const p4 = random(25, 75);
+	const n1 = random(min, max);
+	const n2 = random(min, max);
+	const n3 = random(min, max);
+	const n4 = random(min, max);
 
 	// Create the variant for each corner
-	const _p1 = 100 - p1;
-	const _p2 = 100 - p2;
-	const _p3 = 100 - p3;
-	const _p4 = 100 - p4;
+	const p1 = 100 - n1;
+	const p2 = 100 - n2;
+	const p3 = 100 - n3;
+	const p4 = 100 - n4;
 
 	// Return the border radius for the blob
-	return `${p1}% ${_p1}% ${_p2}% ${p2}% / ${p3}% ${p4}% ${_p4}% ${_p3}%`;
+	return `${n1}% ${p1}% ${p2}% ${n2}% / ${n3}% ${n4}% ${p4}% ${p3}%`;
 }
 
 /**
  * A custom blob element.
  */
 export class BlobElement extends HTMLElement {
+
+	// The attributes that updates the blob
+	static get observedAttributes () {
+		return ["sharpness"];
+	}
 
 	/**
 	 * Setup the component and set the border radius.
@@ -54,6 +69,15 @@ export class BlobElement extends HTMLElement {
 		const shadow = this.attachShadow({mode: "open"});
 		shadow.appendChild(template.content.cloneNode(true));
 		this.setup();
+	}
+
+	// The sharpness of the blob sharpness (0 = circle) (100 = rect)
+	set sharpness (v) {
+		this.setAttribute("sharpness", v);
+	}
+
+	get sharpness () {
+		return parseInt(this.getAttribute("sharpness") || DEFAULT_SHARPNESS );
 	}
 
 	/**
@@ -69,10 +93,18 @@ export class BlobElement extends HTMLElement {
 	}
 
 	/**
+	 * Update the blob each time an observed attribute changes.
+	 */
+	attributeChangedCallback () {
+		this.update();
+	}
+
+	/**
 	 * Updates the border radius.
 	 */
 	update () {
-		this.style.borderRadius = getRandomBorderRadius();
+		console.log("NEW STYLE", this.sharpness);
+		this.style.borderRadius = getRandomBorderRadius(this.sharpness);
 	}
 }
 
